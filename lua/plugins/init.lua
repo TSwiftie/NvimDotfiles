@@ -9,6 +9,12 @@ local use = packer.use
 
 return packer.startup(function()
    local override_req = require("core.utils").override_req
+   use {
+       'hrsh7th/vim-eft',
+       setup = function()
+           require("core.mappings").eft()
+       end,
+   }
    use {'dracula/vim', as = 'dracula'}
 
    use {'williamboman/nvim-lsp-installer'}

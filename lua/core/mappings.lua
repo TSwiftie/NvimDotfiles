@@ -178,4 +178,23 @@ M.telescope = function()
    map("n", m.themes, ":Telescope themes <CR>")
 end
 
+M.eft = function ()
+    cmd "nmap ; <Plug>(eft-repeat)"
+    cmd "xmap ; <Plug>(eft-repeat)"
+
+    cmd "nmap f <Plug>(eft-f)"
+    cmd "xmap f <Plug>(eft-f)"
+    cmd "omap f <Plug>(eft-f)"
+    cmd "nmap F <Plug>(eft-F)"
+    cmd "xmap F <Plug>(eft-F)"
+    cmd "omap F <Plug>(eft-F)"
+
+    cmd "nmap t <Plug>(eft-t)"
+    cmd "xmap t <Plug>(eft-t)"
+    cmd "omap t <Plug>(eft-t)"
+    cmd "nmap T <Plug>(eft-T)"
+    cmd "xmap T <Plug>(eft-T)"
+    cmd "omap T <Plug>(eft-T)"
+end
+
 return M
