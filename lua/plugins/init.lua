@@ -10,6 +10,10 @@ local use = packer.use
 return packer.startup(function()
    local override_req = require("core.utils").override_req
    use {
+       'p00f/nvim-ts-rainbow',
+       after = "nvim-treesitter",
+   }
+   use {
        'hrsh7th/vim-eft',
        setup = function()
            require("core.mappings").eft()
