@@ -55,11 +55,12 @@ nvimtree.setup {
       dotfiles = false,
    },
    disable_netrw = true,
+   open_on_seup = false,
    hijack_netrw = true,
    ignore_ft_on_setup = { "dashboard" },
    auto_close = true,
    open_on_tab = false,
-   hijack_cursor = true,
+   hijack_cursor = false,
    update_cwd = true,
    update_focused_file = {
       enable = true,
@@ -83,5 +84,9 @@ nvimtree.setup {
    },
    git = {
       ignore = false,
+   },
+   system_open = {
+    cmd  = nil,
+    args = {}
    },
 }
