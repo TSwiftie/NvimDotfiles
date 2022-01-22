@@ -3,7 +3,6 @@ local present, nvimtree = pcall(require, "nvim-tree")
 local conf = require("core.utils").load_config().plugins.options.nvimtree
 
 local git_status = conf.enable_git
-local ui = conf.ui
 
 if not present then
    return
@@ -66,7 +65,22 @@ nvimtree.setup {
       enable = true,
       update_cwd = false,
    },
-   view = ui,
+   view = {
+       width = 30,
+       height = 30,
+       hide_root_folder = false,
+       side = 'left',
+       auto_resize = false,
+       mappings = {
+           custom_only = false,
+           list = {
+               { key = "<C-h>",                        action = "split" },
+           }
+       },
+       number = false,
+       relativenumber = false,
+       signcolumn = "yes"
+   },
    git = {
       ignore = false,
    },

@@ -88,13 +88,6 @@ M.plugins = {
          enable_git = 1,
          -- packerCompile required after changing lazy_load
          lazy_load = true,
-
-         ui = {
-            allow_resize = true,
-            side = "left",
-            width = 25,
-            hide_root_folder = false,
-         },
       },
       luasnip = {
          snippet_path = {},
