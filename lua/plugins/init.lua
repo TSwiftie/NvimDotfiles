@@ -22,7 +22,6 @@ return packer.startup(function()
    use {'dracula/vim', as = 'dracula'}
 
    use {'williamboman/nvim-lsp-installer'}
-   use {'glepnir/lspsaga.nvim'}
 
    -- this is arranged on the basis of when a plugin starts
 
