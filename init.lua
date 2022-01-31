@@ -20,11 +20,10 @@ for _, module in ipairs(core_modules) do
    end
 end
 
---vim.cmd [[colorscheme dracula]]
-require("colors").init()
-
 -- non plugin mappings
 require("core.mappings").misc()
+
+require("colors").init()
 
 -- try to call custom init
 pcall(require, "custom")
