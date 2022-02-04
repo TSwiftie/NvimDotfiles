@@ -8,11 +8,16 @@ end
 local use = packer.use
 
 return packer.startup(function()
-   local override_req = require("core.utils").override_req
-   use {
-       'github/copilot.vim',
-   }
-   use {
+    local override_req = require("core.utils").override_req
+    --[[
+    use {
+        'github/copilot.vim',
+        setup = function()
+            require("core.mappings").copilot()
+        end,
+    }
+    --]]
+    use {
        'p00f/nvim-ts-rainbow',
        after = "nvim-treesitter",
    }

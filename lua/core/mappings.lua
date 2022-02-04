@@ -197,4 +197,9 @@ M.eft = function ()
     cmd "omap T <Plug>(eft-T)"
 end
 
+M.copilot = function()
+    cmd [[imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")]]
+    cmd [[let g:copilot_no_tab_map = v:true]]
+end
+
 return M
